@@ -8,7 +8,7 @@ function CommandSection({ section, searchQuery }) {
   };
 
   return (
-    <div className="mb-16">
+    <div className="mb-16 fade-in-up-delay-4">
       <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#E0E0E0] font-bold mb-8 pb-4 border-b-2 border-[#444444]">
         {section.title}
       </h2>

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { commandSections } from './data/commands';
 import CommandSection from './components/CommandSection';
@@ -6,6 +6,15 @@ import CommandSection from './components/CommandSection';
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Disable browser scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   // Filter commands based on search query and category
   const filteredSections = useMemo(() => {
@@ -80,20 +89,24 @@ function App() {
   return (
     <div 
       className="min-h-screen py-6 px-4 sm:px-6 lg:px-8 relative"
-      style={{
-        background: 'linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #121212 100%)'
-      }}
     >
-      <div className="max-w-7xl mx-auto bg-gradient-to-b from-[#1a1a1a] to-[#121212] rounded-2xl shadow-2xl border-2 border-[#444444] p-6 md:p-10 lg:p-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3">
+      <div 
+        className="max-w-7xl mx-auto rounded-2xl shadow-2xl border-2 border-[#444444] p-6 md:p-10 lg:p-12 fade-in-up" 
+        style={{ 
+          minHeight: 'calc(100vh - 6rem)',
+          background: 'linear-gradient(180deg, #1a1a1a 0%, #1a1a1a calc(50vh - 3rem), #121212 100%)',
+          backgroundAttachment: 'local'
+        }}
+      >
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 fade-in-up-delay-1">
           <span className="text-[#E0E0E0]">Antonic's Stream Commands</span>
         </h1>
-        <p className="text-center text-[#B0B0B0] mb-8 text-lg md:text-xl uppercase tracking-widest font-semibold">
+        <p className="text-center text-[#B0B0B0] mb-8 text-lg md:text-xl uppercase tracking-widest font-semibold fade-in-up-delay-1">
           YouTube/Twitch Chat Commands List
         </p>
 
         {/* Search Bar */}
-        <div className="mb-6 flex justify-center">
+        <div className="mb-6 flex justify-center fade-in-up-delay-2">
           <div className="relative max-w-md w-full">
             <input
               type="text"
@@ -118,7 +131,7 @@ function App() {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-3 mb-8 justify-center">
+        <div className="flex flex-wrap gap-3 mb-8 justify-center fade-in-up-delay-3">
           {categories.map(category => (
             <button
               key={category.id}
@@ -140,7 +153,7 @@ function App() {
             <CommandSection key={index} section={section} searchQuery={searchQuery} />
           ))
         ) : (
-          <div className="text-center py-12">
+          <div className="text-center py-12 fade-in-up-delay-4">
             <p className="text-[#B0B0B0] text-lg">No commands found matching your search.</p>
           </div>
         )}
