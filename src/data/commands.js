@@ -156,13 +156,8 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!avatar {choice}"],
-        description: "Select an avatar by replacing \"choice\" with your desired avatar. Type !avatarlist to see all available options.",
-        platform: null,
-      },
-      {
-        aliases: ["!avatar", "!{choice} {form}"],
-        description: "After selecting an avatar, displays all available forms. Use !{choice} {form} to select a specific form, where \"choice\" is the Pokémon name and \"form\" is the variant. Example: !charmander shiny",
+        aliases: ["!avatar {Pokemon} {form}"],
+        description: "Select an avatar and form. Replace \"Pokemon\" with your desired avatar and \"form\" with the variant. Example: !avatar charizard mega_shiny",
         platform: null,
       },
       {
@@ -201,13 +196,13 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!bomb"],
-        description: "Plants a bomb at the cost of 10 currency.",
+        aliases: ["!boom", "!boom {name}"],
+        description: "Plants a bomb at the cost of 10 currency. Without a name, bombs yourself. With a name, targets the specified user.",
         platform: null,
       },
       {
-        aliases: ["!bomb {name}"],
-        description: "Plants a bomb on a specified user at the cost of 10 currency.",
+        aliases: ["!buy avatar {Pokemon}", "!buy gear {pokemon} {gear}", "!buy gear {pokemon}"],
+        description: "Purchase items with currency. Use !buy avatar {Pokemon} to buy a Pokémon avatar. Use !buy gear {pokemon} {gear} to buy specific gear for a Pokémon. Use !buy gear {pokemon} to list all available gears for that Pokémon.",
         platform: null,
       },
     ],
