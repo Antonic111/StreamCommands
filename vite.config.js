@@ -7,7 +7,7 @@ export default defineConfig({
   // Update this base path to match your GitHub repository name
   // For example, if your repo is 'stream-commands', use '/stream-commands/'
   // If deploying to root domain, use '/'
-  base: '/StreamCommands/',
+  base: '/',
   build: {
     outDir: 'dist',
   },
