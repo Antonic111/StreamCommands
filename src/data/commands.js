@@ -1,0 +1,216 @@
+export const commandSections = [
+  {
+    title: "Social/Informational Commands",
+    category: "social",
+    commands: [
+      {
+        aliases: ["!commands"],
+        description: "Displays this command list and provides a link to view all available Stream Avatars commands.",
+        platform: null,
+      },
+      {
+        aliases: ["!discord", "!disc", "!dc"],
+        description: "Provides a link to my community Discord server.",
+        platform: null,
+      },
+      {
+        aliases: ["!instagram", "!insta", "!ig"],
+        description: "Provides a link to my Instagram account.",
+        platform: null,
+      },
+      {
+        aliases: ["!tiktok", "!tt"],
+        description: "Provides a link to my TikTok account.",
+        platform: null,
+      },
+      {
+        aliases: ["!twitch"],
+        description: "Provides a link to my Twitch account.",
+        platform: "YouTube Only",
+      },
+      {
+        aliases: ["!youtube", "!yt"],
+        description: "Provides a link to my YouTube account.",
+        platform: "Twitch Only",
+      },
+      {
+        aliases: ["!livingdex", "!shinydex", "!ld", "!sd", "!collection"],
+        description: "Provides a link to [ultimatedextracker](https://ultimatedextracker.com) to view my complete shiny Pokémon collection tracker.",
+        platform: null,
+      },
+      {
+        aliases: ["!watchtime"],
+        description: "Displays your total watch time on my channel.",
+        platform: "Twitch Only",
+      },
+      {
+        aliases: ["!followage", "!howlong", "!fa"],
+        description: "Displays how long you have been following my channel.",
+        platform: "Twitch Only",
+      },
+      {
+        aliases: ["!code"],
+        description: "Displays my Dynamax Adventure and trade code. (2580 0852)",
+        platform: null,
+      },
+      {
+        aliases: ["!friendcode"],
+        description: "Displays my Nintendo Switch friend code for viewers to add me.",
+        platform: null,
+      },
+      {
+        aliases: ["!social", "!socials", "!linktree", "!linktr", "!lt"],
+        description: "Displays my Linktree with all social media links and additional resources.",
+        platform: null,
+      },
+      {
+        aliases: ["!donation", "!donate"],
+        description: "Provides a StreamElements donation link to support the stream.",
+        platform: null,
+      },
+    ],
+  },
+  {
+    title: "Fun/Other Commands",
+    category: "fun",
+    commands: [
+      {
+        aliases: ["!r.i.p", "!rip"],
+        description: "Pay respects. (Press F)",
+        platform: null,
+      },
+      {
+        aliases: ["!first"],
+        description: "One-time claim per stream to receive 5000 currency and flex your achievement.",
+        platform: "YouTube Only",
+      },
+      {
+        aliases: ["!longesthunts", "!lh", "!longest"],
+        description: "Displays a list of my top 3 longest shiny hunts of all time.",
+        platform: null,
+      },
+      {
+        aliases: ["!checkin"],
+        description: "Check in to the stream to track your visits.",
+        platform: null,
+      },
+      {
+        aliases: ["!checkins"],
+        description: "Displays your total check-in count and current leaderboard rank.",
+        platform: null,
+      },
+      {
+        aliases: ["!checkins top", "!checkins leaderboard"],
+        description: "Displays the top 3 viewers with the most stream visits.",
+        platform: null,
+      },
+      {
+        aliases: ["!lurk", "!lurking", "!brb", "!afk"],
+        description: "Notifies the streamer and chat that you are lurking in the stream.",
+        platform: null,
+      },
+      {
+        aliases: ["!quote {number}"],
+        description: "Displays a random quote, or specify a number to view a specific quote.",
+        platform: null,
+      },
+      {
+        aliases: ["!gamblingluck", "!gl"],
+        description: "Sends a luck message to the chat for gambling.",
+        platform: null,
+      },
+      {
+        aliases: ["!shinyluck", "!sl"],
+        description: "Sends a shiny luck message to the chat.",
+        platform: null,
+      },
+      {
+        aliases: ["!goon"],
+        description: "Sends a goon message about a random character.",
+        platform: null,
+      },
+      {
+        aliases: ["@nult {message}"],
+        description: "ChatGPT powered assistant that responds to questions in chat. Example: @nult How was your day?",
+        platform: null,
+      },
+      {
+        aliases: ["!caught {Form} {Pokemon}"],
+        description: "Adds the specified Pokémon as caught and displays it on a scroller on the stream overlay.",
+        platform: null,
+      },
+    ],
+  },
+  {
+    title: "Stream Avatars",
+    category: "avatar",
+    commands: [
+      {
+        aliases: ["!avatarlist", "!al"],
+        description: "Provides a link to a website showcasing all available avatars for use on the stream.",
+        platform: null,
+      },
+      {
+        aliases: ["!extensions", "!extension"],
+        description: "Opens an extensions page that lets you change avatars and manage avatar-related settings.",
+        platform: null,
+      },
+      {
+        aliases: ["!avatar {choice}"],
+        description: "Select an avatar by replacing \"choice\" with your desired avatar. Type !avatarlist to see all available options.",
+        platform: null,
+      },
+      {
+        aliases: ["!avatar", "!{choice} {form}"],
+        description: "After selecting an avatar, displays all available forms. Use !{choice} {form} to select a specific form, where \"choice\" is the Pokémon name and \"form\" is the variant. Example: !charmander shiny",
+        platform: null,
+      },
+      {
+        aliases: ["!jump"],
+        description: "Performs the jump action with your avatar.",
+        platform: null,
+      },
+      {
+        aliases: ["!sit"],
+        description: "Performs the sit action with your avatar.",
+        platform: null,
+      },
+      {
+        aliases: ["!stand"],
+        description: "Performs the stand action with your avatar.",
+        platform: null,
+      },
+      {
+        aliases: ["!attack {name}"],
+        description: "Performs the attack action with your avatar targeting a specified user.",
+        platform: null,
+      },
+      {
+        aliases: ["!dance"],
+        description: "Performs the dance action with your avatar.",
+        platform: null,
+      },
+      {
+        aliases: ["!fart"],
+        description: "Performs the fart action with your avatar.",
+        platform: null,
+      },
+      {
+        aliases: ["!hug {name}"],
+        description: "Performs the hug action with your avatar targeting a specified user.",
+        platform: null,
+      },
+      {
+        aliases: ["!bomb"],
+        description: "Plants a bomb at the cost of 10 currency.",
+        platform: null,
+      },
+      {
+        aliases: ["!bomb {name}"],
+        description: "Plants a bomb on a specified user at the cost of 10 currency.",
+        platform: null,
+      },
+    ],
+  },
+];
+
