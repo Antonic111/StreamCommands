@@ -90,17 +90,12 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!checkin"],
-        description: "Check in to the stream to track your visits.",
+        aliases: ["!checkin", "!checkin {username}"],
+        description: "Displays your total check-in count and current leaderboard rank. Add a username to check another viewer's stats. Example: !checkin Antonic",
         platform: null,
       },
       {
-        aliases: ["!checkins"],
-        description: "Displays your total check-in count and current leaderboard rank.",
-        platform: null,
-      },
-      {
-        aliases: ["!checkins top", "!checkins leaderboard"],
+        aliases: ["!checkinlb", "!checkin leaderboard"],
         description: "Displays the top 3 viewers with the most stream visits.",
         platform: null,
       },
