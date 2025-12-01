@@ -186,9 +186,11 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
           );
         })}
       </div>
-      <p className="text-[#B0B0B0] leading-relaxed text-sm md:text-base mt-auto">
-        {renderDescription(command.description, searchQuery)}
-      </p>
+      <div className="flex-1 flex items-center">
+        <p className="text-[#B0B0B0] leading-relaxed text-sm md:text-base mx-auto max-w-full">
+          {renderDescription(command.description, searchQuery)}
+        </p>
+      </div>
     </div>
   );
 }
