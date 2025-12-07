@@ -90,28 +90,13 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!checkin", "!checkin {name}"],
+        aliases: ["!checkin", "!checkin {username}"],
         description: "Displays your total check-in count and current leaderboard rank. Add a username to check another viewer's stats. Example: !checkin Antonic",
-        platform: null,
-      },
-      {
-        aliases: ["!checkinmonthly", "!checkinmonthly {name}"],
-        description: "Displays monthly check-in count and leaderboard rank. Add a name to check another viewer's monthly stats. Example: !checkinmonthly Antonic",
-        platform: null,
-      },
-      {
-        aliases: ["!milestone"],
-        description: "Displays how many more check-ins are needed to reach the next milestone.",
         platform: null,
       },
       {
         aliases: ["!checkinlb", "!checkin leaderboard"],
         description: "Displays the top 3 viewers with the most stream visits.",
-        platform: null,
-      },
-      {
-        aliases: ["!checkinlbmonthly"],
-        description: "Displays the monthly check-in leaderboard showing the top viewers for the current month.",
         platform: null,
       },
       {
@@ -145,7 +130,7 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!caught {Form} {Pokemon}"],
+        aliases: ["!caught {Form} {Mon}"],
         description: "Adds the specified Pokémon as caught and displays it on a scroller on the stream overlay.",
         platform: null,
       },
@@ -166,8 +151,23 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!avatar {Pokemon} {form}"],
-        description: "Select an avatar and form. Replace \"Pokemon\" with your desired avatar and \"form\" with the variant. Example: !avatar charizard mega_shiny",
+        aliases: ["!avatar {Mon}"],
+        description: "Select an avatar. Replace \"Mon\" with your desired avatar. Example: !avatar charizard",
+        platform: null,
+      },
+      {
+        aliases: ["!{current Mon} {form}"],
+        description: "Select a form for your current Pokémon avatar. Replace \"current Mon\" with your current avatar name and \"form\" with the variant. Example: !charizard mega_shiny",
+        platform: null,
+      },
+      {
+        aliases: ["!pokeball {ball}"],
+        description: "Change your pokeball. Replace \"ball\" with your desired pokeball type. Example: !pokeball master",
+        platform: null,
+      },
+      {
+        aliases: ["!buy avatar {Mon}", "!buy gear {Mon/ball} {gear}", "!buy gear {Mon}"],
+        description: "Purchase items with currency. Use !buy avatar {Mon} to buy a Pokémon avatar. Use !buy gear {Mon/ball} {gear} to buy specific gear for a Pokémon or ball. Use !buy gear {Mon} to list all available gears for that Pokémon.",
         platform: null,
       },
       {
@@ -208,11 +208,6 @@ export const commandSections = [
       {
         aliases: ["!boom", "!boom {name}"],
         description: "Plants a bomb at the cost of 10 currency. Without a name, bombs yourself. With a name, targets the specified user.",
-        platform: null,
-      },
-      {
-        aliases: ["!buy avatar {Pokemon}", "!buy gear {pokemon} {gear}", "!buy gear {pokemon}"],
-        description: "Purchase items with currency. Use !buy avatar {Pokemon} to buy a Pokémon avatar. Use !buy gear {pokemon} {gear} to buy specific gear for a Pokémon. Use !buy gear {pokemon} to list all available gears for that Pokémon.",
         platform: null,
       },
     ],
