@@ -5,32 +5,32 @@ export const commandSections = [
     commands: [
       {
         aliases: ["!commands"],
-        description: "Displays this command list and provides a link to view all available Stream Avatars commands.",
+        description: "Will provide a link to this website you are currently using.",
         platform: null,
       },
       {
         aliases: ["!discord", "!disc", "!dc"],
-        description: "Provides a link to my community Discord server.",
+        description: "Provides a invite link to my [Discord](https://discord.com/invite/YE9uCuQcrW) community server.",
         platform: null,
       },
       {
         aliases: ["!instagram", "!insta", "!ig"],
-        description: "Provides a link to my Instagram account.",
+        description: "Provides a link to my [Instagram](https://www.instagram.com/yt_antonic) account.",
         platform: null,
       },
       {
         aliases: ["!tiktok", "!tt"],
-        description: "Provides a link to my TikTok account.",
+        description: "Provides a link to my [TikTok](https://www.tiktok.com/@yt_antonic) account.",
         platform: null,
       },
       {
         aliases: ["!twitch"],
-        description: "Provides a link to my Twitch account.",
+        description: "Provides a link to my [Twitch](https://www.twitch.tv/antonic111) account.",
         platform: "YouTube Only",
       },
       {
         aliases: ["!youtube", "!yt"],
-        description: "Provides a link to my YouTube account.",
+        description: "Provides a link to my [YouTube](https://www.youtube.com/@antonic111) account.",
         platform: "Twitch Only",
       },
       {
@@ -64,13 +64,13 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!social", "!socials", "!linktree", "!linktr", "!lt"],
-        description: "Displays my Linktree with all social media links and additional resources.",
+        aliases: ["!social", "!socials", "!solo", "!solo.to"],
+        description: "Displays my [solo.to](https://solo.to/antonic) with all social media links and additional resources.",
         platform: null,
       },
       {
         aliases: ["!donation", "!donate"],
-        description: "Provides a StreamElements donation link to support the stream.",
+        description: "Provides a [StreamElements](https://streamelements.com/antonic111-1c2e0/tip) donation link to support the stream.",
         platform: null,
       },
     ],
@@ -141,7 +141,7 @@ export const commandSections = [
       },
       {
         aliases: ["!goon"],
-        description: "Sends a goon message about a random character.",
+        description: "Sends a goon message about a random character or Pokémon.",
         platform: null,
       },
       {

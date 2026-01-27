@@ -134,7 +134,7 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
     if (lowerAlias.includes('instagram') || lowerAlias.includes('insta') || lowerAlias === '!ig') {
       return { background: platformColors.instagram };
     }
-    if (lowerAlias.includes('linktree') || lowerAlias.includes('linktr') || lowerAlias === '!lt' || lowerAlias.includes('social') || lowerAlias.includes('socials')) {
+    if (lowerAlias.includes('linktree') || lowerAlias.includes('linktr') || lowerAlias === '!lt' || lowerAlias.includes('social') || lowerAlias.includes('socials') || lowerAlias.includes('solo')) {
       return { backgroundColor: platformColors.linktree };
     }
     if (lowerAlias.includes('livingdex') || lowerAlias.includes('shinydex') || lowerAlias === '!ld' || lowerAlias === '!sd' || lowerAlias.includes('collection')) {
