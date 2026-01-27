@@ -39,6 +39,11 @@ export const commandSections = [
         platform: null,
       },
       {
+        aliases: ["!merch"],
+        description: "Provides a link to my [Fourthwall](https://antonic.store/) to view and purchase my merchandise.",
+        platform: null,
+      },
+      {
         aliases: ["!watchtime"],
         description: "Displays your total watch time on my channel.",
         platform: "Twitch Only",
@@ -95,8 +100,23 @@ export const commandSections = [
         platform: null,
       },
       {
+        aliases: ["!checkinmonthly", "!checkinmonthly {username}"],
+        description: "Displays your monthly check-in count and current monthly leaderboard rank. Add a username to check another viewer's stats. Example: !checkinmonthly Antonic",
+        platform: null,
+      },
+      {
         aliases: ["!checkinlb", "!checkin leaderboard"],
         description: "Displays the top 3 viewers with the most stream visits.",
+        platform: null,
+      },
+      {
+        aliases: ["!checkinlbmonthly"],
+        description: "Displays the top 3 viewers with the most monthly stream visits.",
+        platform: null,
+      },
+      {
+        aliases: ["!checkinmilestone"],
+        description: "Displays how far you are from the next milestone reward.",
         platform: null,
       },
       {
@@ -122,6 +142,11 @@ export const commandSections = [
       {
         aliases: ["!goon"],
         description: "Sends a goon message about a random character.",
+        platform: null,
+      },
+      {
+        aliases: ["!goonstats"],
+        description: "Displays the 3 most gooned pokemon/characters from the !goon command.",
         platform: null,
       },
       {
