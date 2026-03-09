@@ -39,6 +39,11 @@ export const commandSections = [
         platform: null,
       },
       {
+        aliases: ["!website"],
+        description: "Provides a link to [ultimatedextracker](https://ultimatedextracker.com) to view the home of the site.",
+        platform: null,
+      },
+      {
         aliases: ["!merch"],
         description: "Provides a link to my [Fourthwall](https://antonic.store/) to view and purchase my merchandise.",
         platform: null,
@@ -135,8 +140,13 @@ export const commandSections = [
         platform: null,
       },
       {
-        aliases: ["!shinyluck", "!sl"],
-        description: "Sends a shiny luck message to the chat.",
+        aliases: ["!shinyluck", "!sl", "!shinyluck {username}", "!shinyluck {mon}"],
+        description: "Sends a shiny luck message to the chat. Add a username or Pokémon to send luck to a specific person or for a specific hunt.",
+        platform: null,
+      },
+      {
+        aliases: ["!topstreak", "!ts"],
+        description: "Shows the highest shiny luck streak ever achieved on the stream.",
         platform: null,
       },
       {
