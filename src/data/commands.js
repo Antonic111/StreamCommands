@@ -26,12 +26,17 @@ export const commandSections = [
       {
         aliases: ["!twitch"],
         description: "Provides a link to my [Twitch](https://www.twitch.tv/antonic111) account.",
-        platform: "YouTube Only",
+        platform: ["kick", "youtube"],
+      },
+      {
+        aliases: ["!kick"],
+        description: "Provides a link to my [Kick](https://kick.com/antonic111) account.",
+        platform: ["youtube", "twitch"],
       },
       {
         aliases: ["!youtube", "!yt"],
         description: "Provides a link to my [YouTube](https://www.youtube.com/@antonic111) account.",
-        platform: "Twitch Only",
+        platform: ["kick", "twitch"],
       },
       {
         aliases: ["!livingdex", "!shinydex", "!ld", "!sd", "!collection"],
@@ -51,12 +56,12 @@ export const commandSections = [
       {
         aliases: ["!watchtime"],
         description: "Displays your total watch time on my channel.",
-        platform: "Twitch Only",
+        platform: ["twitch"],
       },
       {
         aliases: ["!followage", "!howlong", "!fa"],
         description: "Displays how long you have been following my channel.",
-        platform: "Twitch Only",
+        platform: ["twitch"],
       },
       {
         aliases: ["!code"],
@@ -92,7 +97,7 @@ export const commandSections = [
       {
         aliases: ["!first"],
         description: "One-time claim per stream to receive 5000 currency and flex your achievement.",
-        platform: "YouTube Only",
+        platform: ["youtube"],
       },
       {
         aliases: ["!longesthunts", "!lh", "!longest"],

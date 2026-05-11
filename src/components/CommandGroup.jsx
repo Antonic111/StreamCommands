@@ -106,6 +106,7 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
     discord: '#5865F2',      // Discord Blurple
     twitch: '#9146FF',       // Twitch Purple
     youtube: '#FF0000',      // YouTube Red
+    kick: '#53FC18',         // Kick Green
     tiktok: 'linear-gradient(45deg, #ff0050 0%, #2a2a2a 50%, #00f2ea 100%)', // TikTok gradient (Pink to Dark Grey to Aqua)
     instagram: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', // Instagram gradient
     linktree: '#2EBA4A',     // Darker Linktree Green for better contrast
@@ -124,6 +125,9 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
     }
     if (lowerAlias.includes('youtube') || lowerAlias === '!yt') {
       return { backgroundColor: platformColors.youtube };
+    }
+    if (lowerAlias.includes('kick')) {
+      return { backgroundColor: platformColors.kick, color: '#0a0a0a' }; // Dark text on bright green
     }
     if (lowerAlias.includes('tiktok') || lowerAlias === '!tt') {
       return { 
@@ -144,6 +148,20 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
     return null; // No brand color found, use category color
   };
 
+  // Map platform key -> PNG path from /public
+  const platformIcons = {
+    kick: '/Kick.png',
+    twitch: '/Twitch.png',
+    youtube: '/YouTube.png',
+  };
+
+  const platformIsArray = Array.isArray(command.platform);
+  const platformIconPadding = platformIsArray
+    ? command.platform.length * 32 + 60  // icons + gap + "Only" text + container padding
+    : command.platform
+    ? 80
+    : 0;
+
   return (
     <div 
       className="bg-[#141414] rounded-lg border-l-4 flex flex-col h-full relative" 
@@ -153,7 +171,38 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
         padding: command.platform ? '2.25rem 1.5rem 1.75rem 1.5rem' : '1.75rem 1.5rem'
       }}
     >
-      {command.platform && (
+      {platformIsArray ? (
+        <div
+          className="absolute top-3 right-3 flex items-center z-10"
+          style={{
+            gap: 6,
+            backgroundColor: '#1e1e1e',
+            border: '2px solid #444444',
+            borderRadius: 8,
+            padding: '4px 8px',
+          }}
+        >
+          {command.platform.map((p) =>
+            platformIcons[p] ? (
+              <img
+                key={p}
+                src={platformIcons[p]}
+                alt={p}
+                title={p.charAt(0).toUpperCase() + p.slice(1)}
+                style={{
+                  width: 18,
+                  height: 18,
+                  objectFit: 'contain',
+                  borderRadius: 3,
+                }}
+              />
+            ) : null
+          )}
+          <span style={{ color: '#B0B0B0', fontSize: 11, fontWeight: 600, letterSpacing: '0.04em', marginLeft: 2 }}>
+            Only
+          </span>
+        </div>
+      ) : command.platform ? (
         <span 
           className="absolute top-3 right-3 px-2 py-1 rounded-lg text-xs font-semibold border-2 z-10"
           style={{
@@ -164,8 +213,8 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
         >
           {command.platform}
         </span>
-      )}
-      <div className="flex flex-wrap gap-2 mb-4" style={{ paddingRight: command.platform ? '5rem' : '0' }}>
+      ) : null}
+      <div className="flex flex-wrap gap-2 mb-4" style={{ paddingRight: platformIconPadding > 0 ? `${platformIconPadding}px` : '0' }}>
         {command.aliases.map((alias, index) => {
           const brandStyle = getBrandStyle(alias);
           return (
