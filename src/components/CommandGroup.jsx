@@ -109,6 +109,7 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
     kick: '#53FC18',         // Kick Green
     tiktok: 'linear-gradient(45deg, #ff0050 0%, #2a2a2a 50%, #00f2ea 100%)', // TikTok gradient (Pink to Dark Grey to Aqua)
     instagram: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', // Instagram gradient
+    facebook: '#1877F2',     // Facebook Blue
     linktree: '#2EBA4A',     // Darker Linktree Green for better contrast
     googlesheets: '#0F9D58', // Google Sheets Green
   };
@@ -134,6 +135,9 @@ function CommandGroup({ command, categoryColor, searchQuery = '' }) {
         background: platformColors.tiktok,
         color: '#FFFFFF' // White text on gradient background
       };
+    }
+    if (lowerAlias.includes('facebook') || lowerAlias === '!fb') {
+      return { backgroundColor: platformColors.facebook };
     }
     if (lowerAlias.includes('instagram') || lowerAlias.includes('insta') || lowerAlias === '!ig') {
       return { background: platformColors.instagram };

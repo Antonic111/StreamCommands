@@ -24,6 +24,11 @@ export const commandSections = [
         platform: null,
       },
       {
+        aliases: ["!facebook", "!fb"],
+        description: "Provides a link to my [Facebook](https://www.facebook.com/officiallyantonic/) account.",
+        platform: null,
+      },
+      {
         aliases: ["!twitch"],
         description: "Provides a link to my [Twitch](https://www.twitch.tv/antonic111) account.",
         platform: ["kick", "youtube"],
